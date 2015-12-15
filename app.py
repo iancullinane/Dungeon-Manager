@@ -1,10 +1,12 @@
-from flask import Flask
+#from flask import Flask
+#
+#app = Flask(__name__)
+#
+#@app.route("/")
+#def hello():
+#    return "This be a flask app!"
+#
+#if __name__ == "__main__":
+#    app.run(host='0.0.0.0', threaded=True, debug=True)
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
-    return "Hello world!"
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', threaded=True, debug=True)
+print "Welcome to Pit Fighter"
