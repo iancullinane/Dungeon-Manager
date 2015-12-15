@@ -9,4 +9,8 @@
 #if __name__ == "__main__":
 #    app.run(host='0.0.0.0', threaded=True, debug=True)
 
-print "Welcome to Pit Fighter"
+from entities.Player import Player
+
+player = Player()
+
+player.toString()
