@@ -1,0 +1,6 @@
+{
+    "weapons": {
+        "Short Sword": {"DMG": 5},
+        "Long Sword": {"DMG": 10}
+    }
+}
