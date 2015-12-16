@@ -1,28 +1,39 @@
 
 class Entity(object):
 
-    def __init__(self):
-        self.HP = 100
-        self.strength = 5
-        self.dex = 5
-        self.agility = 5
+    def __init__(self, stats = None):
+        self.stats = {}
+        '''A base set of stats when stats are not provided'''
+        if(stats == None):
+            self.stats['HP'] = 10
+            self.stats['STR'] = 5
+            self.stats['AGI'] = 5
+            self.stats['DEX'] = 5
+        else:
+            for k, v in stats.iteritems():
+                self.stats[k] = v
+
         self.equipped = []
         self.inventory = []
 
+
+    def heal(self, points):
+        self.stats['HP'] += points
+
+    def hurt(self, points):
+        self.stats['HP'] -= points
+
     def getAttack(self):
-        return self.strength * 1.3
+        return self.stats['STR'] * 1.3
 
     def getGetHP(self):
-        return self.HP
+        return self.stats['HP']
 
     def getStrength(self):
-        return self.strength
+        return self.stats['STR']
 
     def getDex(self):
-        return self.dex
+        return self.stats['DEX']
 
     def getAgility(self):
-        return self.agility
-
-    def toString(self):
-        print "HP: {}, STR: {}, DEX: {}, AGI: {}".format(self.HP, self.strength, self.dex, self. agility)
+        return self.stats['AGI']

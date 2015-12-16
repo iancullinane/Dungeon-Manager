@@ -1,30 +1,29 @@
-#from flask import Flask
-#
-#app = Flask(__name__)
-#
-#@app.route("/")
-#def hello():
-#    return "This be a flask app!"
-#
-#if __name__ == "__main__":
-#    app.run(host='0.0.0.0', threaded=True, debug=True)
-
+import pickle, requests
 from interface.Printer import Printer
-from entities.Player import Player
+from entities.player import Player
 from entities.Mob import Mob
 from controllers.Game import Game
+#from controllers.MobController import MobController
+from controllers.service_controller import Services
 
-
+print "Welcome to pit fighter\n"
 
 # Set up utility objects
 game = Game()
 printer = Printer()
+services = Services()
+
+player = Player('Tim the Enchanter')
+enemy = services.getRandomMob()
+
 
 # Set up entity objects
-player = Player()
-enemy = Mob()
 
-player.toString()
-enemy.toString()
+while not player.isDead():
+    print "Your turn\n"
+    next_input = raw_input("$=>")
+    if next_input == 'attack':
+        player.attack(enemy)
 
 
+#mobs.printRandomMob()
