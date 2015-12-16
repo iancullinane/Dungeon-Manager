@@ -6,6 +6,11 @@ class Entity(object):
         self.strength = 5
         self.dex = 5
         self.agility = 5
+        self.equipped = []
+        self.inventory = []
+
+    def getAttack(self):
+        return self.strength * 1.3
 
     def getGetHP(self):
         return self.HP
