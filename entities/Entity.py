@@ -23,6 +23,13 @@ class Entity(object):
     def hurt(self, points):
         self.stats['HP'] -= points
 
+    def is_dead(self):
+        if(self.stats['HP'] <= 0):
+            print '{} has died.'.format(self.name)
+            return True
+        else:
+            return False
+
     def getAttack(self):
         return self.stats['STR'] * 1.3
 

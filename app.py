@@ -8,6 +8,8 @@ from controllers.service_controller import Services
 
 print "Welcome to pit fighter\n"
 
+
+
 # Set up utility objects
 game = Game()
 printer = Printer()
@@ -18,12 +20,11 @@ enemy = services.getRandomMob()
 
 
 # Set up entity objects
-
-while not player.isDead():
+while not player.is_dead():
     print "Your turn\n"
     next_input = raw_input("$=>")
     if next_input == 'attack':
         player.attack(enemy)
-
+        enemy.is_dead
 
 #mobs.printRandomMob()

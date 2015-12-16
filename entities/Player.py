@@ -10,8 +10,10 @@ class Player(Entity):
         self.name = name
 
     def attack(self, mob):
-        mob.hurt(self.getAttack())
+        mob.stats['HP'] -= self.getAttack()
         print '{} did {} points of damage\n'.format(self.name, self.getAttack())
+        print 'The {} has {} HP remaining\n'.format(mob.name, str(mob.stats['HP']))
+        mob.is_dead()
 
     def to_string(self):
         print self.name
@@ -20,8 +22,3 @@ class Player(Entity):
             print '{} => {}'.format(k, v)
         print '\n'
 
-    def is_dead(self):
-        if(self.stats['HP'] <= 0):
-            return True
-        else:
-            return False
