@@ -1,4 +1,5 @@
 import pickle, requests
+from entities.mob import Mob
 
 class Services(object):
 
@@ -7,4 +8,4 @@ class Services(object):
 
     def get_random_mob(self):
         mob = requests.get(self._api_url + 'mobs/random')
-        return pickle.loads(mob.text)
+        return mob.content

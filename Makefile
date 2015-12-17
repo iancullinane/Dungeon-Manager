@@ -7,6 +7,9 @@ run: build
 	docker run -d -p 8090:5000 $(TARGET)
 
 test:
+	echo "+----------------------------------------------+"
+	echo "|                START TEST                    |"
+	echo "+----------------------------------------------+"
 	py.test -v
 
 coverage:

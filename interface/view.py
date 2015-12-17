@@ -17,18 +17,20 @@ $$ |      $$ |  \$$$$  |      $$ |      $$ |\$$$$$$$ |$$ |  $$ | \$$$$  |\$$$$$$
                                             \$$$$$$  |
                                              \______/
 '''
+        self.chunks = [self.title]
 
     def clear_screen(self):
         os.system('cls' if os.name == 'nt' else 'clear')
-        print self.title
-        print self.print_state()
+        #print self.title
+        print self.print_state(self.chunks)
+
 
     def get_prompt(self):
         return self.prompt
 
-    def print_state(self):
-        print '''
-You are a pit fighter. Fight your way out of the pit, earn new items with each victory.
+    def print_state(self, chunks):
+        for x in self.chunks:
+            print x
 
-This is a fight to the death, good luck.
-        '''
+    def print_box_array(array):
+        print "+---------------------------------+"

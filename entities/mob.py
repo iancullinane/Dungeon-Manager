@@ -6,6 +6,9 @@ class Mob(Entity):
         super(Mob, self).__init__(stats)
         self.name = name
 
+    def get_name(self):
+        return self.name
+
     def to_string(self):
         print self.name
         print '================='
