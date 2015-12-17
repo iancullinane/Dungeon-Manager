@@ -1,30 +1,24 @@
 import pickle, requests
+from controllers.game import Game
 from interface.Printer import Printer
-from entities.player import Player
-from entities.Mob import Mob
-from controllers.Game import Game
-#from controllers.MobController import MobController
+#from entities.player import Player
+#from entities.mob import Mob
+#from controllers.Game import Game
 from controllers.service_controller import Services
-
-print "Welcome to pit fighter\n"
-
+from interface.view import View
 
 
 # Set up utility objects
-game = Game()
 printer = Printer()
 services = Services()
+view = View()
 
-player = Player('Tim the Enchanter')
-enemy = services.getRandomMob()
-
+view.clear_screen()
+game = Game(services)
 
 # Set up entity objects
-while not player.is_dead():
-    print "Your turn\n"
-    next_input = raw_input("$=>")
-    if next_input == 'attack':
-        player.attack(enemy)
-        enemy.is_dead
-
-#mobs.printRandomMob()
+while not game.player.is_dead():
+    view.clear_screen()
+    for mob in game.mobs:
+        print mob.name
+    user_input = raw_input(view.get_prompt())
