@@ -12,6 +12,8 @@ class TestControllers(unittest.TestCase):
         self.game = Game(self.services)
 
     def test_get_random_mob(self):
-        self.assertEqual(self.services.get_random_mob(), str)
+        self.assertEqual(type(self.services.get_random_mob()), str)
 
-
+    def test_game_init(self):
+        self.assertTrue(self.game.player)
+        self.assertTrue(self.game.mobs[0])

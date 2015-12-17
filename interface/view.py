@@ -17,7 +17,10 @@ $$ |      $$ |  \$$$$  |      $$ |      $$ |\$$$$$$$ |$$ |  $$ | \$$$$  |\$$$$$$
                                             \$$$$$$  |
                                              \______/
 '''
-        self.chunks = [self.title]
+        self.context = '''
+You are a pit fighter, this is a fight to the death, good luck
+'''
+        self.chunks = [self.title, self.context]
 
     def clear_screen(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -32,5 +35,8 @@ $$ |      $$ |  \$$$$  |      $$ |      $$ |\$$$$$$$ |$$ |  $$ | \$$$$  |\$$$$$$
         for x in self.chunks:
             print x
 
-    def print_box_array(array):
-        print "+---------------------------------+"
+    def print_box_array(self, array, width=30):
+        print "+------------------------------+"
+        for item in array:
+            print "|  " + item.get_name()
+        print "+------------------------------+"

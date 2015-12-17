@@ -9,7 +9,6 @@ from interface.view import View
 
 
 # Set up utility objects
-printer = Printer()
 services = Services()
 view = View()
 
@@ -18,7 +17,10 @@ game = Game(services)
 
 # Set up entity objects
 while not game.player.is_dead():
+    view.print_box_array(game.mobs)
     #view.clear_screen()
-    for mob in game.mobs:
-        print mob.name
+    #for mob in game.mobs:
+    #    print mob.name
     user_input = raw_input(view.get_prompt())
+    if user_input == 'attack':
+        game.player.attack(game.mobs[0])
