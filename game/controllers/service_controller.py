@@ -10,5 +10,6 @@ class Services(object):
         mob = requests.get(self._api_url + 'mobs/random')
         return mob.content
 
-    #def combat(self, data):
-    #    requests.post(self.apu_url + '/combat', data=data)
+    def start_combat(self, player):
+        req = requests.post(self._api_url + 'combat/start', data = player)
+        return req.content

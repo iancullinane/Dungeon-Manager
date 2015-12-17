@@ -23,6 +23,7 @@ while game.player.is_alive():
     #    print mob.name
     user_input = raw_input(view.get_prompt())
     if user_input == 'attack':
+        services.start_combat(game.player.to_string())
         game.player.attack(game.mobs[0])
     elif user_input == 'clear':
         view.clear_screen()
