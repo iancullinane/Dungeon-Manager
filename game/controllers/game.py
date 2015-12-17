@@ -14,7 +14,7 @@ class Game(object):
     def init_game(self):
         #print "Enter your name:"
         #name = raw_input()
-        self.player = Player("Tim the Enchanter")
+        self.player = Player("Tim")
         monster_count = 5
         for i in range(0, monster_count):
             new_mob = pickle.loads(self.services.get_random_mob())

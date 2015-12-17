@@ -16,7 +16,7 @@ view.clear_screen()
 game = Game(services)
 
 # Set up entity objects
-while not game.player.is_dead():
+while game.player.is_alive():
     view.print_box_array(game.mobs)
     #view.clear_screen()
     #for mob in game.mobs:
@@ -24,3 +24,5 @@ while not game.player.is_dead():
     user_input = raw_input(view.get_prompt())
     if user_input == 'attack':
         game.player.attack(game.mobs[0])
+    elif user_input == 'clear':
+        view.clear_screen()

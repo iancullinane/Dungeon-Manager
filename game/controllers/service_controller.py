@@ -9,3 +9,6 @@ class Services(object):
     def get_random_mob(self):
         mob = requests.get(self._api_url + 'mobs/random')
         return mob.content
+
+    #def combat(self, data):
+    #    requests.post(self.apu_url + '/combat', data=data)

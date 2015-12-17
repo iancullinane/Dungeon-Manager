@@ -1,0 +1,77 @@
+{
+
+    "mobs":[
+        {
+            "name" : "Slime",
+            "stats" : {
+                "HP":8,
+                "STR":2,
+                "AGI":8,
+                "DEX":5
+            }
+        },
+        {
+            "name" : "Skeleton",
+            "stats" : {
+                "HP":30,
+                "STR":5,
+                "AGI":9,
+                "DEX":2
+            }
+        },
+        {
+            "name" : "Dewey Sasser",
+            "stats" : {
+                "HP":30,
+                "STR":5,
+                "AGI":9,
+                "DEX":2
+            }
+        },
+        {
+            "name" : "Dire Wolf",
+            "stats" : {
+                "HP":150,
+                "STR":10,
+                "AGI":9,
+                "DEX":4
+            }
+        },
+        {
+            "name" : "Angry Programmer",
+            "stats" : {
+                "HP":1,
+                "STR":1,
+                "AGI":1,
+                "DEX":1
+            }
+        },
+        {
+            "name" : "Samnite Warrior",
+            "stats" : {
+                "HP":19,
+                "STR":7,
+                "AGI":4,
+                "DEX":6
+            }
+        },
+        {
+            "name" : "Killer Chipmunk",
+            "stats" : {
+                "HP":7,
+                "STR":2,
+                "AGI":10,
+                "DEX":4
+            }
+        },
+        {
+            "name" : "Phil Danger",
+            "stats" : {
+                "HP":200,
+                "STR":10,
+                "AGI":10,
+                "DEX":10
+            }
+        }
+    ]
+}

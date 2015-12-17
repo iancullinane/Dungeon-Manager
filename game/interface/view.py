@@ -25,7 +25,7 @@ You are a pit fighter, this is a fight to the death, good luck
     def clear_screen(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         #print self.title
-        print self.print_state(self.chunks)
+        self.print_state(self.chunks)
 
 
     def get_prompt(self):

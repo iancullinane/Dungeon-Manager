@@ -30,10 +30,14 @@ class TestEntities(unittest.TestCase):
         self.player.heal(8)
         self.assertEqual(self.player.stats['HP'], 10)
 
-    def test_is_dead(self):
+    def test_life(self):
+        self.assertTrue(self.player.is_alive())
         self.assertFalse(self.player.is_dead())
         self.player.stats['HP'] = 0
         self.assertTrue(self.player.is_dead())
+        self.assertFalse(self.player.is_alive())
+
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -11,7 +11,8 @@ class TestControllers(unittest.TestCase):
         self.services = Services()
         self.game = Game(self.services)
 
-    def test_get_random_mob(self):
+    def test_get_random_mob_returns_string(self):
+        '''get random mob should return a string'''
         self.assertEqual(type(self.services.get_random_mob()), str)
 
     def test_game_init(self):
