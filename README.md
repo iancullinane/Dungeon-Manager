@@ -1,0 +1,1 @@
+This was when I was big into using [Flask](https://flask.palletsprojects.com/en/stable/). To be fair I still think Flask is good tech and definitely I prefer it to Django, but I don't see any good reason to use Python for real software.
